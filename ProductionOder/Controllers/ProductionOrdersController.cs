@@ -13,8 +13,8 @@ namespace ProductionOrder.Controllers
     [Route("[controller]")]
     public class ProductionOrdersController : Controller
     {
-        private readonly AESProductionOrdersDbContext _ProductionOderDbContext;
-        public ProductionOrdersController(AESProductionOrdersDbContext ProductionOderDbContext)
+        private readonly ProductionOrderDbContext _ProductionOderDbContext;
+        public ProductionOrdersController(ProductionOrderDbContext ProductionOderDbContext)
         {
             _ProductionOderDbContext = ProductionOderDbContext;
         }
