@@ -34,16 +34,25 @@ namespace ProductionOder.Controllers
         }
 
         [HttpPost(Name = "NewProductionOrder")]
-        public IEnumerable<ProductionOrderAPI> Post()
+        public async Task<IActionResult> AddData([FromBody] NewProduction_Order dataRequest)
         {
-            return Enumerable.Range(1, 5).Select(index => new ProductionOrderAPI
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            await _ProductionOderDbContext.NewProduction_Order.AddAsync(dataRequest);
+            await _ProductionOderDbContext.SaveChangesAsync();
+            return Ok(dataRequest);
+
         }
+
+        //[HttpPost(Name = "NewProductionOrder")]
+        //public IEnumerable<ProductionOrderAPI> Post()
+        //{
+        //    return Enumerable.Range(1, 5).Select(index => new ProductionOrderAPI
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = Random.Shared.Next(-20, 55),
+        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+        //    })
+        //    .ToArray();
+        //}
 
     }
 }

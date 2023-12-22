@@ -2,7 +2,7 @@
 {
     public class NewProduction_Order
     {
-        public long ProductionOrderID { get; set; }
+        public Guid ProductionOrderID { get; set; }
 
 
         public string WIPOrderNo { get; set; }
