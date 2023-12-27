@@ -11615,19 +11615,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\x\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TEST\\ProductionOder\\ProductionOder\\ProductionOrder.csproj",
+      "projectUniqueName": "D:\\WORKING\\TEST\\ApiProductionOrder\\ProductionOder\\ProductionOrder.csproj",
       "projectName": "ProductionOrder",
-      "projectPath": "D:\\TEST\\ProductionOder\\ProductionOder\\ProductionOrder.csproj",
-      "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-      "outputPath": "D:\\TEST\\ProductionOder\\ProductionOder\\obj\\",
+      "projectPath": "D:\\WORKING\\TEST\\ApiProductionOrder\\ProductionOder\\ProductionOrder.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\WORKING\\TEST\\ApiProductionOrder\\ProductionOder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\x\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

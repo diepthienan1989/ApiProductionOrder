@@ -13,6 +13,7 @@ namespace ProductionOrder.Controllers
     [Route("[controller]")]
     public class ProductionOrdersController : Controller
     {
+       
         private readonly ProductionOrderDbContext _ProductionOderDbContext;
         public ProductionOrdersController(ProductionOrderDbContext ProductionOderDbContext)
         {
@@ -28,11 +29,21 @@ namespace ProductionOrder.Controllers
 
         }
 
+
+        //view all data
+        [HttpGet]
+        public async Task<IActionResult> GetAllData()
+        {
+            var datas = await _ProductionOderDbContext.ProductionOrders.OrderBy(n => n.ProductionOrderID).ToListAsync();
+            return Ok(datas);
+        }
+
+
+        // 
         [HttpGet]
         [Route("{id:long}")]
-        public async Task<IActionResult> GetDataId([FromRoute] Guid id)
+        public async Task<IActionResult> GetDataId([FromRoute] long id)
         {
-            int ID = 0;
             var data = await _ProductionOderDbContext.ProductionOrders.FirstOrDefaultAsync(x => x.ProductionOrderID == id);
             if (data == null)
             {
@@ -41,6 +52,9 @@ namespace ProductionOrder.Controllers
             return Ok(data);
         }
 
-      
+
+
+
+
     }
 }
